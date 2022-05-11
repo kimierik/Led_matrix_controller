@@ -16,14 +16,10 @@ ser = serial.Serial(usb_port,baudrate=9600,timeout=1)
 
 
 
-path= r'%s' % path
-file="matrixanimastionmap.json"
-print(path)
 def main():#read json and save it into maplist as a list
 
     time.sleep(3)
 
-    npath= "%s\%s" % (path,file)
     with open(path,"r")as filed:
         data=filed.read()
         dic=json.loads(data)
